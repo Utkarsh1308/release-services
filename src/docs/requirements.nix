@@ -2,7 +2,7 @@
 # See more at: https://github.com/garbas/pypi2nix
 #
 # COMMAND:
-#   pypi2nix -v -C /app/src/docs/../../../tmp/pypi2nix -V 3.7 -O ../../nix/requirements_override.nix -E pkgconfig -E zlib -E libjpeg -E openjpeg -E libtiff -E freetype -E lcms2 -E libwebp -E tcl -r requirements.txt
+#   pypi2nix -v -C /tmp/release-services-8k0p_5gg/src/docs/../../../tmp/pypi2nix -V 3.7 -O ../../nix/requirements_override.nix -E pkgconfig -E zlib -E libjpeg -E openjpeg -E libtiff -E freetype -E lcms2 -E libwebp -E tcl -r requirements.txt
 #
 
 { pkgs ? import <nixpkgs> {},
@@ -130,10 +130,10 @@ let
     };
 
     "MarkupSafe" = python.mkDerivation {
-      name = "MarkupSafe-1.1.0";
+      name = "MarkupSafe-1.1.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ac/7e/1b4c2e05809a4414ebce0892fe1e32c14ace86ca7d50c70f00979ca9b3a3/MarkupSafe-1.1.0.tar.gz";
-        sha256 = "4e97332c9ce444b0c2c38dd22ddc61c743eb208d916e4265a2a3b575bdccb1d3";
+        url = "https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz";
+        sha256 = "29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
@@ -141,8 +141,8 @@ let
       buildInputs = commonBuildInputs ++ [ ];
       propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
-        homepage = "https://www.palletsprojects.com/p/markupsafe/";
-        license = licenses.bsdOriginal;
+        homepage = "https://palletsprojects.com/p/markupsafe/";
+        license = "BSD-3-Clause";
         description = "Safely add untrusted strings to HTML/XML markup.";
       };
     };
@@ -184,10 +184,10 @@ let
     };
 
     "Sphinx" = python.mkDerivation {
-      name = "Sphinx-1.8.3";
+      name = "Sphinx-1.8.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/4d/ed/4595274b5c9ce53a768cc0804ef65fd6282c956b93919a969e98d53894e4/Sphinx-1.8.3.tar.gz";
-        sha256 = "c4cb17ba44acffae3d3209646b6baec1e215cad3065e852c68cc569d4df1b9f8";
+        url = "https://files.pythonhosted.org/packages/dd/f8/df628d41f42793d446285767164c6a8da71d82892f2c98c43e0523836d39/Sphinx-1.8.4.tar.gz";
+        sha256 = "c1c00fc4f6e8b101a0d037065043460dffc2d507257f2f11acaed71fd2b0c83c";
       };
       doCheck = commonDoCheck;
       checkPhase = "";
